@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p2</title>
+</head>
+<body>
+    <script>
+        let a=Number.parseInt(prompt("Enter the two digit Number: "));
+        let x =["One","Two","Three","Four","Five","Six","Seven","Eight","Nine"];
+        let y =["Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"];
+        let z =["","","Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninty"];
+        let ans="";
+        let oncedigit;
+        let tensdigit;
+        let Hundreddigit;
+        if(a<0||a>999){
+            document.write("Invalid Input")
+        }
+        else{
+            oncedigit=(a%10);
+            tensdigit=Number.parseInt((a-oncedigit)/10)%10;
+            Hundreddigit=Number.parseInt(a-(a%100))/100;
+        }
+        if(a==0 || a==00||a==000){
+        document.write("Zero");
+        }else if(Hundreddigit!=0){
+            ans=x[Hundreddigit-1]+"-Hundred";
+        }
+        if(tensdigit==1){
+            ans=ans + " " +y[oncedigit];
+        }
+        else{
+            ans=ans + " " +z[tensdigit];
+
+            ans=ans + " "+x[oncedigit-1];
+        }
+
+
+        document.write(a+" = "+ans);
+    </script>
+</body>
+</html>

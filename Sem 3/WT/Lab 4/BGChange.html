@@ -1,0 +1,70 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BG CHange</title>
+</head>
+
+<body>
+
+    <input type="button" value="Start BG" onclick="startCounter()">
+    <input type="button" value="Stop BG" onclick="stopCounter()">
+    <input type="button" value="Start FG" onclick="startFG()">
+    <input type="button" value="Stop FG" onclick="stopFG()">
+
+    <script type="text/javascript">
+
+
+        function myFun() {
+            r = Math.ceil(Math.random() * 255)
+            g = Math.ceil(Math.random() * 255)
+            b = Math.ceil(Math.random() * 255)
+            document.body.style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")"
+        }
+        flag = 0;
+        function startCounter() {
+            if (flag == 0) {
+                c = setInterval(myFun, 500);
+                flag = 1;
+            }
+        }
+
+        function stopCounter() {
+            if (flag == 1) {
+                clearInterval(c);
+                flag = 0;
+            }
+        }
+
+        function myFG() {
+            r = Math.ceil(Math.random() * 255)
+            g = Math.ceil(Math.random() * 255)
+            b = Math.ceil(Math.random() * 255)
+            document.getElementById("para").style.color = "rgb(" + r + ", " + g + " ," + b + ")"
+        }
+        flagA = 0;
+        function startFG() {
+            if (flagA == 0) {
+                c2 = setInterval(myFG, 500);
+                flagA = 1;
+            }
+        }
+        function stopFG() {
+            if (flagA == 1) {
+                clearInterval(c2);
+                flagA = 0;
+            }
+        }
+    </script>
+    <p id="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </p>
+</body>
+
+</html>

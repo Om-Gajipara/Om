@@ -1,0 +1,11 @@
+--lab 4--
+
+--1
+create function FPRINT()
+RETURNS VARCHAR(100)
+AS 
+BEGIN
+RETURN 'HELLOWORLD'
+END 
+SELECT DBO.FPRINT()
+

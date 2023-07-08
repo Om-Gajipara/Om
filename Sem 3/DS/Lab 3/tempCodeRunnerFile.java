@@ -1,0 +1,1 @@
+Enter the position of the number you want to delete

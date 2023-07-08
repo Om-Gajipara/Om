@@ -1,0 +1,172 @@
+/* Add here all your css styles (customizations) */
+/*****************************************
+    Root Changes
+******************************************/
+/*body {
+    line-height: 1.3 !important;
+    font-weight: 400;*/
+    /*font-size: 14px;*/
+    /*font-size: 1rem;*/
+    /*color: #222;*/
+    /*color: #333;*/
+/*}
+
+p {
+    color: #222;*/
+    /*color: #333;*/
+    /*font-size: 14px;*/
+/*}*/
+
+.hs-has-sub-menu .hs-has-sub-menu > a::after {
+    right: 10px;
+}
+
+.bold {
+    font-weight: 700 !important;
+}
+
+/*a, .btn {
+    font-size: inherit;
+    line-height: inherit;
+}*/
+
+bolder {
+    font-weight: bolder;
+}
+
+.h1, .h2, .h3, .h4,
+h1, h2, h3, h4 {
+    font-family: "Work Sans";
+}
+
+.h5:not(.g-font-secondary), .h6:not(.g-font-secondary) {
+    font-family: inherit;
+}
+
+a p {
+    color: #333 !important;
+}
+
+
+/*****************************************
+    Custom Container for DU
+******************************************/
+.container-du-content {
+    max-width: 1560px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+@media (max-width: 992px) {
+    .container-du-content {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-du-content {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+/*****************************************/
+
+
+/*****************************************
+    Darshan Box-shadows-v1
+******************************************/
+.d-shadow-v1 {
+    -webkit-box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.d-shadow-v1--hover:hover {
+    -webkit-box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+
+.g-bg-sidebar-v1 {
+    background: linear-gradient(90deg, #d61b3c 0%, #26304d 100%) !important;
+}
+
+/*****************************************
+    Darshan Section Heading Old
+******************************************/
+.du.u-heading-v3-1 {
+    margin-bottom: 15px;
+}
+
+.du.u-heading-v3__title {
+    font-size: 1.5rem;
+    color: #d61b3c;
+    font-weight: bold;
+    border-bottom: 2px solid #26304d;
+    padding-bottom: 0.14286rem;
+}
+/*****************************************
+    Darshan Section Heading Old
+******************************************/
+.d-heading-v1 {
+    border-bottom: 1px dotted #AAA;
+}
+
+.d-heading-v1__title {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 0.4rem;
+    border-left: 0px solid #555;
+    font-weight: 600;
+    color: #333;
+}
+
+
+/*****************************************
+    Darshan Custom Tab
+******************************************/
+.nav.du-nav-v1 {
+    border-bottom: 1px solid #ccc;
+}
+.nav-item.du-tab-v1 {
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    margin: 5px 5px 0 0;
+    font-weight: 600;
+    border-top: 1px solid #ccc; 
+    border-left: 1px solid #ccc; 
+    border-right: 1px solid #ccc;
+    border-bottom: 0;
+}
+
+
+/*****************************************
+    DU Colors
+******************************************/
+.g-bg-du-blue {
+    background-color: #13294b;
+}
+
+.g-bg-du-blue--hover:hover {
+    background-color: #13294b !important;
+}
+
+.g-color-du-blue {
+    color: #13294b;
+}
+
+.g-bg-du-lineargradient-v1 {
+    background-repeat: repeat-x;
+    background-image: linear-gradient(225deg,#d61b3c, #13294b);
+    /*background-image: linear-gradient(225deg,#13294b,#d61b3c);*/
+}

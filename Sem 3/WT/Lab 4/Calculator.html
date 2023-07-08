@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .calculator {
+      width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+    }
+    #result {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+      <input type="text" id="expression" class="form-control" placeholder="Enter expression">
+      <br>  
+      <div class="row">
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="*" onclick="appendCharacter('*')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="÷" onclick="appendCharacter('/')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-secondary btn-block" value="<-" onclick="eraseCharacter()">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-secondary btn-block" value="C" onclick="clearExpression()">
+        </div>        
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="1" onclick="appendCharacter('1')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="2" onclick="appendCharacter('2')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="3" onclick="appendCharacter('3')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="%" onclick="appendCharacter('%')">
+      </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="4" onclick="appendCharacter('4')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="5" onclick="appendCharacter('5')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="6" onclick="appendCharacter('6')">
+        </div>
+        <div class="col-3">
+            <input type="button" class="btn btn-primary btn-block" value="+" onclick="appendCharacter('+')">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="7" onclick="appendCharacter('7')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="8" onclick="appendCharacter('8')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="9" onclick="appendCharacter('9')">
+        </div>
+        <div class="col-3">
+            <input type="button" class="btn btn-primary btn-block" value="-" onclick="appendCharacter('-')">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="." onclick="appendCharacter('.')">
+          </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-primary btn-block" value="0" onclick="appendCharacter('0')">
+        </div>
+        <div class="col-5">
+          <input type="button" class="btn btn-primary btn-block" value="=" onclick="calculate()">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+      </div>
+      <br>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script>
+    function appendCharacter(character) {
+      var expression = document.getElementById('expression');
+      expression.value += character;
+    }
+    
+    // function eraseCharacter() {
+    //   var expression = document.getElementById('expression');
+      
+    // }
+
+    function clearExpression() {
+      var expression = document.getElementById('expression');
+      expression.value = '';
+    }
+
+    function calculate() {
+      var expression = document.getElementById('expression').value;
+      var result;
+
+      try {
+        result = eval(expression);
+        finalans=document.getElementById('expression').value;
+
+      } catch (error) {
+        document.getElementById('result').innerText = 'Invalid expression';
+      }
+    }
+  </script>
+</body>
+</html>

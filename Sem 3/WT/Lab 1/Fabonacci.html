@@ -1,0 +1,29 @@
+<!-- WAP in java script to Find Fabonacci serise till term enter by user -->
+
+<html>
+    <head>
+        <title>
+            Java Script Factorial
+        </title>
+        <script>
+            let a= Number.parseInt(prompt("Enter Number"));
+            let x=0;
+            let y=1;
+            let temp=0;
+            let str = 0+","+1;
+            while(a>0){
+                temp=y;
+                y=x+temp;
+                x=y;
+                str= str+y;
+                console.log(str);
+                a--;
+            }
+            document.write(str)
+            
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

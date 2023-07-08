@@ -1,0 +1,1 @@
+CREATE TABLE City (CityID int, CityName varchar (50), Pincode varchar (6), Remarks varchar (250));CREATE TABLE Village (VillageID int, VillageName varchar (50), CityID int);--1

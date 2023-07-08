@@ -1,0 +1,207 @@
+
+
+
+
+--CREATE TABLE DEPOSIT
+--(ACTNO INT,
+--CNAME VARCHAR(50),
+--BNAME VARCHAR(50),
+--AMOUNT DECIMAL(8,2),
+--ADATE DATETIME
+--);
+
+--CREATE TABLE BRANCH
+--(BNAME VARCHAR(50),
+--CITY VARCHAR(50)
+--);
+
+--CREATE TABLE COUSTOMERS
+--(CNAME VARCHAR(50),
+--CITY VARCHAR(50),
+--);
+
+INSERT INTO COUSTOMERS
+VALUES('ANIL','CALCUTTA');
+
+SELECT* FROM COUSTOMERS;
+
+SELECT* FROM BORROW;
+
+SELECT ACTNO,CNAME,AMOUNT FROM DEPOSIT;
+
+SELECT LOANNO,AMOUNT FROM BORROW;
+
+SELECT LOANNO FROM BORROW 
+			WHERE BNAME = 'ANDHERI';
+
+SELECT ACTNO,AMOUNT FROM DEPOSIT
+		WHERE ACTNO = 106;
+
+SELECT CNAME FROM BORROW
+		WHERE AMOUNT > 5000;
+
+SELECT CNAME FROM DEPOSIT
+		WHERE ADATE > '1-DEC-96';
+
+SELECT CNAME FROM DEPOSIT
+		WHERE ACTNO < 105;
+
+--11
+SELECT CNAME FROM COUSTOMERS
+     where city = 'nagpur' or city = 'dilhi';
+
+select cname from COUSTOMERS
+	where CITY in ('nagpur','dilhi');
+
+--12
+select cname,bname from DEPOSIT
+	where AMOUNT > 4000 
+	and actno< 105 ;
+
+--13
+select * from BORROW
+	where AMOUNT between 3000 and 8000;
+
+--14
+select * from DEPOSIT
+	where bname != 'andheri';
+
+--15
+select cname from BORROW
+	where AMOUNT is null;
+
+--16
+select actno,cname,amount from DEPOSIT
+	where BNAME in ('ajni','karolbagh','M.G.Road')
+	and actno < 104;
+
+--17
+select top 5 * from COUSTOMERS
+
+--18
+select top 3 *from DEPOSIT
+ where amount > 1000;
+
+--19
+select top 5  loanno,cname from BORROW
+	where bname != 'andheri';
+
+--20
+select distinct city from COUSTOMERS;
+
+--21
+select distinct bname from BRANCH;
+
+--22
+select  * from COUSTOMERS
+	order by CITY;
+
+--23
+select * from DEPOSIT
+	order by AMOUNT desc;
+
+--24
+select * from COUSTOMERS
+	order by CITY desc;
+
+--25
+select distinct cname as UNI_borrow from BORROW;
+
+	
+
+
+
+--2.2
+--1
+select * from DEPOSIT
+update DEPOSIT set AMOUNT = 5000 
+	where AMOUNT = 3000;
+
+--2
+select * from BORROW
+update BORROW set BNAME = 'C.G.Road'
+	where CNAME = 'anil';
+
+--3
+select * from DEPOSIT
+update DEPOSIT set ACTNO = 111,AMOUNT = 5000 
+	where CNAME = 'sandip';
+
+--4
+select * from BORROW
+update BORROW set AMOUNT = AMOUNT + (AMOUNT * 10 /100);
+
+--5
+select * from DEPOSIT
+update DEPOSIT set AMOUNT = 5000 
+	where ACTNO between 103 and 107;
+
+--6
+select * from BORROW
+update borrow set AMOUNT = NULL
+	WHERE LOANNO = 321;
+
+--7
+SELECT * FROM BORROW
+UPDATE BORROW SET LOANNO = 401,BNAME = 'AJNI'
+	WHERE LOANNO = 201 AND BNAME = 'VIRAR';
+
+--8
+SELECT * FROM COUSTOMERS
+UPDATE COUSTOMERS SET CNAME = 'ANIL JAIN'
+	WHERE CNAME = 'ANIL';
+
+--9
+SELECT * FROM DEPOSIT
+UPDATE DEPOSIT SET CNAME = 'RAMESH',BNAME = 'VRCE',AMOUNT = 5500
+	WHERE ACTNO =102;
+
+--10
+SELECT * FROM BORROW
+UPDATE BORROW SET BNAME = NULL , AMOUNT = NULL
+	WHERE LOANNO = 481 AND CNAME = 'KRANTI';
+
+
+
+--2.3
+--1
+SELECT * FROM COUSTOMERS
+DELETE FROM COUSTOMERS 
+	WHERE CITY = 'BOMBAY';
+
+--2
+SELECT * FROM DEPOSIT
+DELETE FROM DEPOSIT
+	WHERE AMOUNT <= 1000;
+
+--3
+SELECT * FROM BORROW
+DELETE FROM BORROW
+	WHERE BNAME = 'AJNI';
+
+--4
+SELECT * FROM BORROW
+
+DELETE FROM BORROW
+	WHERE LOANNO BETWEEN 201 AND 210;
+
+--5
+SELECT * FROM DEPOSIT
+DELETE FROM DEPOSIT
+	WHERE ADATE  > '1-12-96';
+
+--6
+TRUNCATE TABLE CUSTOMERS
+
+--7
+DELETE FROM DEPOSIT
+WHERE CNAME='ANIL' AND ACTNO=101;
+
+--8
+DELETE FROM DEPOSIT
+WHERE CNAME='ANIL' AND ACTNO=101;
+
+--9
+DELETE FROM BORROW
+
+--10

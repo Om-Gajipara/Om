@@ -1,0 +1,37 @@
+<!-- WAP in java script to make simple calculator using popup box -->
+
+<html>
+    <head>
+        <title>
+            Java Script Calculator
+        </title>
+        <script>
+            let a= Number.parseInt(prompt("Enter first Number"));
+            let b= Number.parseInt(prompt("Enter Second Number"));
+            let c= prompt("Enter + to add ,- to sub,* to multiply, / to div");
+            switch(c) {
+                    case "+":
+                    document.write("answer ="+(a+b));
+                        break;
+
+                    case "-":
+                    document.write("answer ="+(a-b));
+                        break;
+
+                    case "*":
+                    document.write("answer ="+(a*b));
+                        break;
+
+                    case "/":
+                    document.write("answer ="+(a/b));
+                        break;
+
+                    default:
+                    document.write("Invalid Input");
+                    }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

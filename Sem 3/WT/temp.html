@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login Page</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password">
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+
+  <script>
+    // Function to handle form submission
+    function handleLogin(event) {
+      event.preventDefault(); // Prevent form from submitting and page reloading
+
+      // Get input values
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Perform login validation (dummy validation in this example)
+      if (username === 'admin' && password === 'password') {
+        alert('Login successful!');
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    }
+
+    // Attach event listener to the form's submit event
+    var loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', handleLogin);
+  </script>
+</body>
+</html>
+

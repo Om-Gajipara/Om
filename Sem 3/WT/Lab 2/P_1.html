@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p1</title>
+</head>
+<body>
+    <script>
+        let a=Number.parseInt(prompt("Enter the two digit Number: "))
+        let ans=1;
+        let Firstdigit;
+        let Seconddigit
+        if(a<=9||a>99){
+            document.write("Invalid Input")
+        }
+        else{
+             Firstdigit=(a%10);
+             Seconddigit=Number.parseInt(a/10);
+        }
+        for(let i=1;i<=Firstdigit;i++){
+            ans=ans*Seconddigit;
+        }
+        document.write("Answer="+ans);
+    </script>
+</body>
+</html>

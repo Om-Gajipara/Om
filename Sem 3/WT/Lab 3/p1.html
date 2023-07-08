@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p 1</title>
+</head>
+<body>
+    <script>
+        let a = prompt("enter any string:");
+        let opt;
+        let Fpos=a.indexOf("a");
+        let Lpos=a.lastIndexOf("a");
+        document.write("<br>Input string: "+a);
+
+
+document.write("<br>First Postition of 'a': "+Fpos+"<br> Last Postition of 'a': "+Lpos
+                        +"<br>Output String :"+a.substr(Fpos+1,Lpos-1));
+
+    </script>
+</body>
+</html>
